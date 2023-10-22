@@ -22,12 +22,34 @@ code {
 }
 
 .main {
-    background: skyblue;
-    display: flex;
     background-color: #f4f5f9;
-    padding: 4rem;
     height: 100vh;
+    padding: 2rem 2rem 2rem 2rem;
     color: #636363;
+    gap: 1rem;
+}
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.filter-container button:not(.active) {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+.active {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background: #e1e4ea;
+    border: 1px solid red;
+}
+.content-container {
+    height: 100%;
+    display: flex;
+    padding: 1rem 0;
 }
 .aside {
     display: inline-block;
@@ -36,26 +58,29 @@ code {
     cursor: pointer;
     transition: width 0.5s ease-out;
     list-style-type: none;
-    padding-right: 1rem;
+    padding-right: 0.5rem;
 }
 .nav-item {
     list-style-type: none;
     border: 1px solid #cfd2dc;
     border-radius: 0.5rem;
-    margin: 1rem auto;
+    margin-bottom: 1rem;
     padding: 0.5rem 2rem;
     display: flex;
     align-items: flex-start;
     gap: 2rem;
 }
-.nav-item:hover {
-    background: #ececec;
+.read {
+    background: #f2f2f2;
 }
 .item-details {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     overflow: hidden;
+}
+.content-details {
+    width: 100%;
 }
 .avatar {
     display: flex;
@@ -75,15 +100,37 @@ code {
     text-overflow: ellipsis;
 }
 .content {
-    display: inline-block;
-    background-color: yellow;
     height: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    border: 1px solid #cfd2dc;
+    border-radius: 0.5rem;
+}
+.content h1 {
+    text-transform: capitalize;
+    font-size: xx-large;
+}
+.mail-body {
+    margin-top: 1rem;
+}
+.mail-body p {
+    margin-bottom: 1rem;
 }
 .wrapper {
-    background-color: black;
+    display: inline-block;
     width: 0px;
     transition: width 0.5s ease-out;
+    overflow: hidden;
+}
+.favorite-btn {
+    border: none;
+    background: #e54065;
+    float: right;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: white;
+    cursor: pointer;
 }
